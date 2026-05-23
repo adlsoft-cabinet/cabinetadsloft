@@ -1,0 +1,23 @@
+name: Construire Cabinet Medical.exe
+on:
+  push:
+    branches: [ main, principal ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Installer dépendances
+        run: pip install flask flask-cors pyinstaller
+      - name: Construire le .exe
+        run: |
+          pyinstaller --onefile --windowed --name "CabinetMedical" --add-data "src;src" server.py
+      - name: Télécharger le .exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: CabinetMedical-Windows
+          path: dist/CabinetMedical.exe
