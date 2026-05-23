@@ -1,0 +1,66 @@
+╔══════════════════════════════════════════════════════════════════╗
+║         🏥 CABINET MÉDICAL — GUIDE COMPLET                       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ARCHITECTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Technologie : Python + Flask + SQLite
+  Base de données : cabinet.db  (fichier sur le PC, pas de serveur)
+  Interface : HTML/CSS/JS (dans src/)
+
+  ZERO installation requise sur le PC client.
+  ZERO XAMPP. ZERO MariaDB. ZERO PHP.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ÉTAPE 1 — PRÉREQUIS (sur votre PC de développement)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ Python 3.11+ → https://python.org/downloads
+    ⚠ Cocher "Add Python to PATH"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ÉTAPE 2 — CRÉER LE .EXE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ▶ Double-cliquez sur : CONSTRUIRE_EXE.bat
+    Attendez 2-3 minutes.
+    Le .exe est créé dans le dossier  dist\
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ÉTAPE 3 — LIVRER AU CABINET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Donnez au médecin UN SEUL fichier :
+    📦 Cabinet Medical.exe
+
+  Au 1er lancement :
+    → cabinet.db est créé automatiquement
+    → Le navigateur s'ouvre sur http://localhost:5000
+    → Données de démonstration déjà présentes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  COMPTES DE DÉMONSTRATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Admin        : admin@cabinet.local  /  admin123
+  Docteur      : dr.dupont@cabinet.local  /  doc456
+  Secrétaire   : martin@cabinet.local  /  sec789
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SAUVEGARDE DES DONNÉES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Copier le fichier  cabinet.db  = sauvegarde complète.
+  Recommander au médecin de le copier sur clé USB chaque semaine.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STRUCTURE DU PROJET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  server.py            ← Serveur Flask + SQLite (cœur de l'app)
+  src/index.html       ← Interface complète (HTML/CSS/JS)
+  requirements.txt     ← Dépendances Python
+  CONSTRUIRE_EXE.bat   ← Script de build (double-clic)
+  cabinet.db           ← Base de données (créée au 1er lancement)
